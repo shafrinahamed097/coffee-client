@@ -11,6 +11,7 @@ const AddCoffee = () => {
     const category = form.category.value;
     const details = form.details.value;
     const photo = form.photo.value;
+    const price = form.price.value;
 
     const newCoffee = {
       name,
@@ -20,6 +21,7 @@ const AddCoffee = () => {
       category,
       details,
       photo,
+      price
     };
     console.log(newCoffee);
 
@@ -104,8 +106,7 @@ const AddCoffee = () => {
               name="details"
             />
           </fieldset>
-        </div>
-        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border my-6 p-4">
+          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border my-6 p-4">
           <label className="label text-white">Photo</label>
           <input
             type="text"
@@ -114,6 +115,17 @@ const AddCoffee = () => {
             name="photo"
           />
         </fieldset>
+        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border my-6 p-4">
+          <label className="label text-white">price</label>
+          <input
+            type="text"
+            className="input w-full"
+            placeholder="Price"
+            name="price"
+          />
+        </fieldset>
+        </div>
+        
         <input type="submit" className="btn w-full" value="Add Coffee" />
       </form>
     </div>
